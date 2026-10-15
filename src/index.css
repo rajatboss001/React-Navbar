@@ -1,1 +1,5 @@
 @import "tailwindcss";
+
+@theme {
+    --color-medium-orchid: #BA55D3
+}

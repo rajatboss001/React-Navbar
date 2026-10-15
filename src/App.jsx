@@ -14,7 +14,7 @@ function App() {
 
   return (
     <div className="min-h-screen bg-gray-100">
-      <nav className="flex items-center justify-between p-5 bg-black text-white relative">
+      <nav className="flex items-center justify-between p-5 bg-medium-orchid text-white relative">
         <h1 className="text-2xl font-bold">Rajat</h1>
 
         <button
