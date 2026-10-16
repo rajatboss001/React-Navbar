@@ -1,9 +1,17 @@
 
-import { useState } from "react";
+import { useState, useEffect } from "react";
 
 function App() {
   const [menuOpen, setMenuOpen] = useState(false);
   const [count, setCount] = useState(0);
+
+   useEffect(() => {
+    document.body.style.overflow = menuOpen ? "hidden" : "auto";
+
+    return () => {
+      document.body.style.overflow = "auto";
+    };
+  }, [menuOpen]);
 
   const navLinks = [
     { name: "Home", href: "#home" },
@@ -31,7 +39,7 @@ function App() {
             max-md:fixed max-md:top-0 max-md:right-0
             max-md:w-1/2 max-md:h-screen
             max-md:justify-center max-md:items-center
-            max-md:bg-black max-md:z-40
+            bg-medium-orchid max-md:z-40
             md:flex md:flex-row md:items-center
           `}
         >
