@@ -66,7 +66,6 @@ function App() {
         </button>
       </nav>
 
-      {/* Center Counter */}
       <div className="flex min-h-[80vh] flex-col items-center justify-center gap-6">
         <h2 className="text-3xl font-bold dark:text-white">Counter: {count}</h2>
 
