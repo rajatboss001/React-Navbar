@@ -57,13 +57,13 @@ function App() {
               </a>
             </li>
           ))}
-        </ul>
-        <button
+          <button
           className="cursor-pointer rounded-full bg-amber-200 px-5 py-2 text-xl font-semibold text-gray-900 shadow-md transition-all duration-300 hover:bg-amber-300 hover:shadow-lg active:scale-95"
           onClick={toggleDarkMode}
         >
           🌙 Dark Mode
         </button>
+        </ul>
       </nav>
 
       <div className="flex min-h-[80vh] flex-col items-center justify-center gap-6">
