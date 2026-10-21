@@ -43,7 +43,7 @@ function App() {
             max-md:w-1/2 max-md:h-screen
             max-md:justify-center max-md:items-center
             bg-medium-orchid max-md:z-40 dark:bg-black
-            md:flex md:flex-row md:items-center
+            md:flex md:flex-row md:items-center transition-all duration-600
           `}
         >
           {navLinks.map((link) => (
