@@ -1,5 +1,9 @@
 @import "tailwindcss";
 
 @theme {
-    --color-medium-orchid: #BA55D3
+    --color-medium-orchid: #BA55D3;
+
+
 }
+
+@custom-variant dark (&:where(.dark, .dark *));
