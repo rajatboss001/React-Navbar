@@ -36,16 +36,23 @@ function App() {
         </button>
 
         <ul
-          className={`
-            ${menuOpen ? "flex" : "hidden"}
-            flex-col gap-6
-            max-md:fixed max-md:top-0 max-md:right-0
-            max-md:w-1/2 max-md:h-screen
-            max-md:justify-center max-md:items-center
-            bg-medium-orchid max-md:z-40 dark:bg-black
-            md:flex md:flex-row md:items-center transition-all duration-600
-          `}
-        >
+  className={`
+    flex flex-col gap-6
+    max-md:fixed max-md:top-0 max-md:right-0
+    max-md:w-1/2 max-md:h-screen
+    max-md:justify-center max-md:items-center
+    bg-medium-orchid dark:bg-black
+    max-md:z-40
+
+    ${menuOpen
+      ? "max-md:translate-x-0"
+      : "max-md:translate-x-full"
+    }
+
+    transition-transform duration-500 ease-in-out
+    md:flex md:flex-row md:items-center
+  `}
+>
           {navLinks.map((link) => (
             <li key={link.name}>
               <a
@@ -72,21 +79,21 @@ function App() {
         <div className="flex gap-4">
           <button
             onClick={() => setCount(count - 1)}
-            className="rounded-lg bg-red-500 px-5 py-3 text-white"
+            className="rounded-lg cursor-pointer bg-red-500 px-5 py-3 text-white"
           >
             Decrease
           </button>
 
           <button
             onClick={() => setCount(0)}
-            className="rounded-lg bg-gray-700 px-5 py-3 text-white"
+            className="rounded-lg cursor-pointer bg-gray-700 px-5 py-3 text-white"
           >
             Reset
           </button>
 
           <button
             onClick={() => setCount(count + 1)}
-            className="rounded-lg bg-purple-600 px-5 py-3 text-white"
+            className="rounded-lg cursor-pointer bg-purple-600 px-5 py-3 text-white"
           >
             Increase
           </button>
